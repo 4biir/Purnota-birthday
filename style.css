@@ -27,7 +27,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Dancing Script', cursive;
     background: linear-gradient(45deg, var(--bg-dark), var(--bg-light));
     color: var(--text-light);
     display: flex;
