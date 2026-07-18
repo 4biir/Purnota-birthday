@@ -27,9 +27,11 @@
 }
 
 body {
-    font-family: Dancing Script', cursive;
-    background: linear-gradient(45deg, var(--bg-dark), var(--bg-light));
-    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+   background: linear-gradient(135deg,#1b0034,#4b006e,#ff4d88);
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
+color: var(--text-light);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +76,7 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 10px var(--shadow-medium);
     letter-spacing: 0.5px;
+    animation: pulseBtn 2s infinite;
 }
 
 .action-button:hover {
@@ -287,6 +290,10 @@ body {
     color: var(--accent-yellow);
     margin: 5px 0 20px;
     text-shadow: 3px 3px 8px var(--shadow-medium);
+    text-shadow:
+0 0 10px #fff,
+0 0 20px pink,
+0 0 35px hotpink;
     line-height: 1;
 }
 
@@ -571,4 +578,14 @@ body {
     .signature { font-size: 1.2rem; }
     .cake { transform: scale(0.7); }
     .envelope { transform: scale(0.7); } /* Even smaller envelope */
+}
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+@keyframes pulseBtn{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
 }
