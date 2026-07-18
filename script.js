@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const envelopeContainer = document.getElementById('envelopeContainer');
     const unfoldButton = document.getElementById('unfoldButton');
     const finalGreetingElement = document.getElementById('finalGreeting');
-
+    const candleFlame = document.getElementById('candleFlame');
     const steps = {
         step1: document.getElementById('step1'),
         step2: document.getElementById('step2'),
@@ -160,4 +160,33 @@ document.addEventListener('DOMContentLoaded', () => {
             firework.addEventListener('animationend', () => firework.remove());
         }
     }
+// Candle blow effect
+candleFlame.addEventListener("click", () => {
+
+    candleFlame.style.opacity = "0";
+    candleFlame.style.transform = "scale(0)";
+
+    for(let i=0;i<25;i++){
+
+        const heart=document.createElement("div");
+
+        heart.innerHTML="❤️";
+
+        heart.style.position="fixed";
+        heart.style.left=Math.random()*100+"vw";
+        heart.style.top=Math.random()*100+"vh";
+        heart.style.fontSize=(Math.random()*20+15)+"px";
+        heart.style.animation="floatHeart 4s linear forwards";
+        heart.style.pointerEvents="none";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },4000);
+
+    }
+
+    alert("Happy Birthday Purnota ❤️");
+});
 });
